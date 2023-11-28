@@ -140,7 +140,7 @@ print(onesArray)
 zeroArray = np.zeros(shape = 8, dtype = int)
 print(zeroArray)
 
-emptyArray = np.empty(shape = 8, dtype=int)
+emptyArray = np.empty(shape = 8, dtype='int32')
 print(emptyArray)
 
 
@@ -159,6 +159,9 @@ print(emptyArray)
 # The following code will contain a range of exercises using NumPy, 
 # it is recommended that you start at the top and work your way down in stages to help support your development 
 
+#########################################################################################
+
+# NumPy exercises
 
 # Task 01 - Create an array
 # using NumPy, create an array wich contains the below numbers, you should print this out the screen in ordre to test
@@ -225,4 +228,87 @@ randomArray = np.array([[1005, 2154, 1123,6524],
 # Also if you can save and retrieve this data back from a file after you have used it.
 
 ###############################################################################
+
+########### Some more ways of dealing with arrays #############
+
+# Accessing/Changing specific elements, rows, columns, etc
+
+"""
+a = np.array([[1,2,3,4,5,6,7],[8,9,10,11,12,13,14]])
+print(a)
+
+# Get a specific element [r, c]
+print(a[1, 5])
+
+# Get a specific row 
+print(a[0, :])
+
+# Get a specific column
+print(a[:, 2])
+
+# Getting a little more fancy [startindex:endindex:stepsize]
+print(a[0, 1:-1:2])
+
+a[1,5] = 20
+
+a[:,2] = [1,2]
+print(a)
+
+b = np.array([[[1,2],[3,4]],[[5,6],[7,8]]])
+print(b)
+
+# Get specific element (work outside in)
+print(b[0,1,1])
+
+# replace 
+b[:,1,:] = [[9,9],[8,8]]
+print(b)
+
+"""
+
+
+############## Initializing Different Types of Arrays #######################
+
+# All 1s matrix
+a = np.ones((4,2,2), dtype='int32')
+print(a)
+
+# Any other number
+b = np.full((2,2), 99)
+print(b)
+
+# Any other number (full_like)
+c = np.full_like(a, 4)
+print(c)
+
+# Random decimal numbers
+d = np.random.rand(4,2)
+print(d)
+
+# Random Integer values
+e = np.random.randint(-4,8, size=(3,3))
+print(e)
+
+###################################################################################
+
+# Repeat an array
+arr = np.array([[1,2,3]])
+r1 = np.repeat(arr,3, axis=0)
+print(r1)
+
+output = np.ones((5,5))
+print(output)
+
+z = np.zeros((3,3))
+z[1,1] = 9
+print(z)
+
+output[1:-1,1:-1] = z
+print(output)
+
+
+
+
+
+
 
