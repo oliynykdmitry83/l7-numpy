@@ -43,3 +43,20 @@ randomArray = np.array([[1005, 2154, 1123,6524],
                         [1111, 3354, 6625, 2247],
                         [1679, 4652, 6431, 1465]])
 #""" 
+
+# Math #1
+# Display the avarage of the above array
+
+# Math #2
+# Start by displaying the numbers within the 3rd column with this array.
+# Using these values, provide the avarage value of the third column within this array
+# Display this value to 2 decimal places
+
+# Math #3
+# Provide the avarage value of the first 2 rows withing this array. 
+
+# Math #4
+# Provide the minimum and maximun value withing this array
+
+
+##############################################################################
