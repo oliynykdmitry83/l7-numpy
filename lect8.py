@@ -60,3 +60,20 @@ randomArray = np.array([[1005, 2154, 1123,6524],
 
 
 ##############################################################################
+
+# NumPy Challenge Scenario:
+#
+# Student Grade Tracker
+# 
+# 15 students have been provided with grades the max mar avaliable is 100.
+# Allow for the user to put these values into a NumPy array.
+# 
+# Once this has been completed, you will need to comlete the following using this dataset:
+#   • Work out the minimum, maximun and avarange grade.
+#   • Sort the grades in ascending order
+#   • All points will be provided with 2 extra marks, display the output for this.
+#   * Display the tpo three  and lowest three grades scored.
+# Also if you can save and retrieve this data back from a file after you have used it.
+
+###############################################################################
+
