@@ -2,6 +2,8 @@
 #  Comments made by hash symbol are not interactive and moustly contain some explanation or theory
 #  Other coments by set of triple double quotes """some code""" are interactive part of code you can play with
 #  Be aware that they Always! go in paires so to comment/uncomment code you need to keep that in your mind.
+#  You can put a # in front of """ to comment the comment  
+
 
 
 #  To "install" NumPy go to "Tools" -> "Packages" -> Numpy -> install
@@ -105,5 +107,116 @@ print(npSortedAsending)
 npSortedDescending = -np.sort(-npArray)
 print(npSortedDescending)
 """
-    
+
+###############################################################################
+
+# Random
+#
+# You can use NumPy to random generate values too, similar to how you can do so within the random library.
+# Syntax includes below:
+
+"""
+import numpy as np
+
+ranNumber = np.random.rand(10)
+print(ranNumber)
+
+    #sample output:
+    # [0.85575163, 0.05040093, 0.7102702, 0.03855975, 0.35728328, 0.53939736, 
+    # 0.23432606, 0.45416568, 0.43985665, 0.52917647]
+
+ranNumber2 = np.random.randint(0, 10, 6)
+print(ranNumber2)
+    #sample output:
+    # [2, 0, 4, 3, 0, 8]
+
+ranNumber3 = np.random.default_rng(12)      #random generator
+ranInts = ranNumber3.integers(low = 0, high = 10, size = 6)
+print(ranNumber3)
+print(type(ranNumber3))
+print(ranInts)
+
+""" 
+# Arange
+# 
+# This method wiil provide numbersat evently spaced intervals. For instance:
+# 
+
+"""
+import numpy as np
+
+exampleRange = np.arange(0, 40, 2)
+print(exampleRange)
+
+    #output:
+    #[0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38]
+
+"""    
+
+# Zeros, Ones and Empty
+#
+# There will be times within Python where you may want to initialise an array in memory to store
+# predetermined values. Can be used as part of machine learning, you may come across some of the following comands:
+#   
+#   •np.ones()
+#   •np.zeros()
+#   •np.empty()
+#
+# The full syntax of these are below:
+# 
+#   np.ones(shape =  , dtype = )
+#   np.ones     - the function name;
+#   shape =     - A tuple of values specifying the shape;
+#   dtype =     - The data type of the output
+
+
+#   Let's look for some examplesof these:
+
+"""
+import numpy as np
+
+onesArray = np.ones(shape = 8)
+zeroArray = np.zeros(shape = 8)
+emptyArray = np.empty(shape = 8)
+
+print(onesArray)
+print(zeroArray)
+print(emptyArray)
+
+"""
+
+# the otput should be:
+# [1. 1. 1. 1. 1. 1. 1. 1.]
+# [0. 0. 0. 0. 0. 0. 0. 0.]
+# [0. 0. 0. 0. 0. 0. 0. 0.]
+
+# Note that even though it appears that the emptyArray has stored zeros, this is not the case in memory
+# (exmple futher down) - This method will output uninitialised/arbitrary data.
+
+# We can se this in action by providing each of the above methods a datatype,
+# such as by doing the following:
+
+#"""
+import numpy as np
+
+onesArray = np.ones(shape = 8, dtype = int)
+print(onesArray)
+
+zeroArray = np.zeros(shape = 8, dtype = int)
+print(zeroArray)
+
+emptyArray = np.empty(shape = 8, dtype=int)
+print(emptyArray)
+
+
+    # This will return back the following:
+    # [1 1 1 1 1 1 1 1]
+    # [0 0 0 0 0 0 0 0]
+    # [1634692198, 2037653620, 539780464, 1970233953, 1697783924, 540422445, 1830841961, 544502639] 
+    #  
+#"""
+
+
+# Typically,  using np.empty() will be quicker for a large matrices, due to machine not needing to
+# initialise every element with a specific value. 
 
