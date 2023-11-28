@@ -32,7 +32,7 @@
 # Mathmatical Arrays
 # Within the following challenges (all labelled Math #value), use the below code at the start:
 
-#"""
+"""
 # Imports NumPy in order to be used
 import numpy as np
 
@@ -42,7 +42,7 @@ randomArray = np.array([[1005, 2154, 1123,6524],
                         [3365, 9564, 4474, 5632],
                         [1111, 3354, 6625, 2247],
                         [1679, 4652, 6431, 1465]])
-#""" 
+""" 
 
 # Math #1
 # Display the avarage of the above array
@@ -76,4 +76,34 @@ randomArray = np.array([[1005, 2154, 1123,6524],
 # Also if you can save and retrieve this data back from a file after you have used it.
 
 ###############################################################################
+
+# NumPy Methods
+# 
+# Sorting Values
+# 
+# We can use NumPy to organise data within our array/matrix,  these use the .sort() method.
+# The bellow script goes through some examples of these:
+
+"""
+import numpy as np
+
+npArray = np.array([34, 2, 35, 33, 12, 54, 24, 46])
+
+npAvarage = np.average(npArray)
+npMin = np.min(npArray)
+npMax = np.max(npArray)
+npSize = npArray.size  # .size is in core Python
+
+print("Avarage: ", npAvarage)
+print("Minimum: ", npMin)
+print("Maximum: ", npMax)
+print("Size of Array: ", npSize)
+
+npSortedAsending = np.sort(npArray)
+print(npSortedAsending)
+
+npSortedDescending = -np.sort(-npArray)
+print(npSortedDescending)
+"""
+    
 
